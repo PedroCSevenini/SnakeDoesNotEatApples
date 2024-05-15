@@ -1,1 +1,2 @@
-C++ - Snake Game - By Pedro Sevenini
+# C-Snake-Game
+ 🐍 C++ Snake Terminal Game |
