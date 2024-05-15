@@ -98,7 +98,7 @@ int* geraComida(char malha[larguraTela][alturaTela]){
 static char Key(Cobrinha &cobra)
 {
     if (_kbhit()){
-        return _getch(); // Obtém a tecla pressionada
+        return _getch(); // ObtÃ©m a tecla pressionada
     }
     return cobra.getDirecao();
     
@@ -161,7 +161,7 @@ int main(){
             SetConsoleCursorPosition(hConsole, posicao);
         }
         pontosDisplay();
-        /* Fim da impressão*/
+        /* Fim da impressÃ£o*/
         while (gameover == 0) {
             resetDisplay(malha);//Reseta a malha do display a cada movimento
             malha[coordComida[0]][coordComida[1]] = comida; //Insere a comida no Display
@@ -171,12 +171,12 @@ int main(){
 
             Sleep(100); //Segura o jogo por tempo para diminuir a velocidade da cobra
 
-            cobra.atualizaDirecao(Key(cobra));//Atualiza a direção com base na key pressionada
+            cobra.atualizaDirecao(Key(cobra));//Atualiza a direÃ§Ã£o com base na key pressionada
 
             cobra.movimentoCobra();//Movimento da cobra
             gameover = verificaColisao(cobra.getPrimeiro()->getCoordX(), cobra.getPrimeiro()->getCoordY(), malha);//Verifica se a cobra colidiu com o proprio corpo ou com a borda
             if (cobra.getPrimeiro()->getCoordX() == coordComida[0] && cobra.getPrimeiro()->getCoordY() == coordComida[1]) {//Verifica se comeu
-                cobra.insereInicio(coordComida[0], coordComida[1]);//Cobra cresce com base na posição da comida
+                cobra.insereInicio(coordComida[0], coordComida[1]);//Cobra cresce com base na posiÃ§Ã£o da comida
                 pontos += 10;//Soma pontos
                 coordComida = geraComida(malha);//Reseta a comida
             }
